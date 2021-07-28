@@ -7,6 +7,7 @@ import { IMAGE_BASE_URL, POSTER_SIZE } from '../config';
 import Grid from './Grid';
 import Spinner from './Spinner';
 import BreadCrumb from './BreadCrumb';
+import MovieInfo from './MovieInfo';
 
 // Hooks
 import { useParams } from 'react-router-dom';
@@ -29,7 +30,8 @@ const Movie = () => {
 
     return (
         <>
-            <BreadCrumb movieTitle={movie.title} />
+            <BreadCrumb movieTitle={movie.original_title} />
+            <MovieInfo movie={movie} />
         </>
     );
 }
