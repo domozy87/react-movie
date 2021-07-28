@@ -37,5 +37,9 @@ export const Content = styled.div`
         background: transparent;
         height: 40px;
         color: var(--white);
+
+        :focus {
+            outline: none;
+        }
     }
 `;
