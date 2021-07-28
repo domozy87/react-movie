@@ -24,13 +24,19 @@ const Home = () => {
 
             const movies = await API.fetchMovies(searchTerm, page);
 
-            console.log(movies);
+            setState(prev => ({
+                ...movies,
+                results: page > 1 ? [...prev.results, ...movies.results] : [...movies.results],
+            }));
         }
         catch(error) {
             setError(true);
         }
-    }
 
+        setLoading(false);
+    };
+
+    // Initialize rendering
     useEffect(() => {
         fetchMovies(1);
     }, []);
