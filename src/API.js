@@ -5,12 +5,12 @@ import {
     API_URL,
 } from './config';
 
-const defaultConfig = {
-    method: 'POST',
-    header: {
-        'Content-Type': 'application/json'
-    }
-};
+// const defaultConfig = {
+//     method: 'POST',
+//     header: {
+//         'Content-Type': 'application/json'
+//     }
+// };
 
 export default {
     fetchMovies: async (searchTerm, page) => {
